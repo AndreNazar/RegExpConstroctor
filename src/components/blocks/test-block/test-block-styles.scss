@@ -1,0 +1,75 @@
+@import "../../../scss/imports.scss";
+
+.test-block{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+    &-title{
+        flex-grow: 0;
+        min-height: fit-content;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #29A93E;
+        color: #fff;
+        margin: 0;
+        font-weight: bold;
+        padding: .5em 1em;
+        font-size: 18px;
+    }
+    &-text{
+        font-family: 'Montserrat';
+        flex-grow: 1;
+        resize: none;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 1em;
+        box-sizing: border-box;
+        color: #aa7;
+        font-size: 14px;
+        &::placeholder{
+            color: #999;
+        }
+        
+    }
+    &-output{
+        flex-grow: 1;
+        width: 100%;
+        padding: 1em;
+        box-sizing: border-box;
+        color: #444;
+        font-size: 14px;
+        span{
+            border-left: 1px dashed #29A93E;
+            border-right: 1px dashed #29A93E;
+            background-color: #F2B603;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .test-block{
+        &-title{
+            font-size: 16px;
+        }
+        &-output,
+        &-text{
+            font-size: 12px;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .test-block{
+        &-title{
+            font-size: 14px;
+        }
+        &-output,
+        &-text{
+            font-size: 11px;
+        }
+    }
+}

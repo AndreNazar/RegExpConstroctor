@@ -1,0 +1,45 @@
+@import '../../../scss/imports.scss';
+
+.result-block{
+    position: absolute;
+    margin: 1em 0 0 1em;
+    padding: 1em;
+    left: $blocksblock_w;
+    box-sizing: border-box;
+    display: flex;
+    align-self: flex-end;
+    width: calc(calc(100% - $blocksblock_w) - 1em);
+    height: fit-content;
+    background-color: #ffffff;
+    cursor: pointer;
+    p.text{
+        font-family: monospace;
+        margin: 0;
+        margin-left: .7em;
+        font-size: 18px;
+        color: #f2b603;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    
+    .result-block{
+        left: $blocksblock_w - 50px;
+        width: calc(calc(100% - calc($blocksblock_w - 50px)) - 1em);
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .result-block{
+        left: $blocksblock_w - 100px;
+        width: calc(calc(100% - calc($blocksblock_w - 100px)) - 1em);
+    }
+}
+@media screen and (max-width: 600px) {
+    .result-block{
+        left: $blocksblock_w - 150px;
+        width: calc(calc(100% - calc($blocksblock_w - 150px)) - 1em);
+    }
+}

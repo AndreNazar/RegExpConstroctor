@@ -1,0 +1,11 @@
+@import "./imports.scss";
+
+body{
+    margin: 0;
+    font-family: 'Montserrat';
+    background-color: #f1f1f1;
+    
+    .main-container{
+        display: flex;
+    }
+}

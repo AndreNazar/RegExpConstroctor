@@ -1,0 +1,32 @@
+@import '../../scss/imports.scss';
+
+.main-screen{
+    display: flex;
+    width: calc(100% - $blocksblock_w - 1em);
+    height: calc(100vh - 1em - 24px - 2em);
+    gap: 1em;
+    margin: 0 0 0 1em;
+    
+
+}
+
+@media screen and (max-width: 800px) {
+    
+    .main-screen{
+        width: calc(100% - ($blocksblock_w - 50px) - 1em);
+    }
+    
+}
+@media screen and (max-width: 700px) {
+    .main-screen{
+        width: calc(100% - ($blocksblock_w - 100px) - 1em);
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-screen{
+        width: calc(100% - ($blocksblock_w - 150px) - 1em);
+        .blocks-items{
+            grid-template-columns: 1fr;
+        }
+    }
+}

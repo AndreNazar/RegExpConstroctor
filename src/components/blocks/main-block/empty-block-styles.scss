@@ -1,0 +1,24 @@
+@import "../../../scss/imports.scss";
+
+.empty-block{
+    display: grid;
+    padding: 1em;
+    width: fit-content;
+    color: #999;
+    text-align: center;
+    justify-items: center;
+    .EB-text{
+        width: 70%;
+    }
+    .place-drop{
+        position: absolute;
+        top: 2em;
+        bottom: 2em;
+        left: 2em;
+        right: 2em;
+        border: 3px dashed #9999;
+    }
+    img{
+        width: 60px;
+    }
+}

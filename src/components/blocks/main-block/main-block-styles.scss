@@ -1,0 +1,111 @@
+@import "../../../scss/imports.scss";
+
+.main-block{
+    position: relative;
+    display: grid;
+    box-sizing: border-box;
+    width: 70%;
+    align-content: center;
+    justify-content: center;
+    padding: 1em;
+    height: 100%;
+    background-color: #fff;
+    .main-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 1em;
+        .main-item{
+            position: relative;
+            display: flex;
+            align-items: center;
+            @include item_base();
+            border-radius: 0;
+            height: 20px;
+            padding-right: 2em;
+            transition: .1s;
+            .extra-items{
+                position: absolute;
+                top: 0;
+                right: .5em;
+                transform: translateY(-50%);
+                display: flex;
+                gap: .2em;
+                .extra{
+                    margin: 0;
+                    padding: .2em;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 100%;
+                    background-color: #29a93e;
+                }
+            }
+            &:hover{
+                margin-top: -2px;
+                height: 22px;
+            }
+            .drop-zone{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                .zone-left{
+                    position: absolute;
+                    left: -25%;
+                    width: 50%;
+                    height: 150%;
+                    z-index: 1;
+                }
+
+                svg{
+                    position: absolute;
+                    left: -12px;
+                    top: -20px;
+                    z-index: -1;
+                }
+            }
+            .delete-button{
+                @include cross_style();
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                width: 12px;
+                height: 12px;
+                background-color: #fff;
+                border-radius: 100px;
+                transform: translateY(-50%);
+
+            }
+        }
+        .empty-main-item{
+            position: relative;
+            width: 0;
+            height: 20px;
+            background-color: #f2b603;
+            cursor: auto;
+            &:hover{
+                border: none;
+            }
+            .drop-zone{
+                position: absolute;
+                left: 0;
+                height: 100%;
+                .zone-left{
+                    left: -50px;
+                    width: 100px;
+                }
+            }
+        }
+        .selected-main-item{
+            height: 22px;
+            margin-top: -2px;
+        }
+    }
+
+}

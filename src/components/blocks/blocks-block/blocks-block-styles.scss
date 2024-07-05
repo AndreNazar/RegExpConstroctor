@@ -1,0 +1,44 @@
+@import "../../../scss/imports.scss";
+
+.blocks-block{
+    width: $blocksblock_w;
+    height: 100vh;
+    background-color: #FFFFFF;
+    h4{
+        margin: 0;
+        padding: 1em;
+    }
+    .blocks-items{
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+        gap: .5em;
+        padding: 1em;
+        .blocks-item{
+            @include item_base();
+            cursor: grab;
+            &:active{
+                cursor: grabbing !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .blocks-block{
+        width: $blocksblock_w - 50px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .blocks-block{
+        width: $blocksblock_w - 100px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .blocks-block{
+        width: $blocksblock_w - 150px;
+        .blocks-items{
+            grid-template-columns: 1fr;
+        }
+    }
+}

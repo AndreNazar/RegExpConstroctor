@@ -1,0 +1,29 @@
+@import "../../../scss/imports.scss";
+
+.header-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #29a93e;
+    box-sizing: border-box;
+    padding: .5em 1em;
+    color: #fff;
+    h2{
+        font-family: 'Alef';
+        margin: 0;
+        font-size: 18px;
+    }
+    svg{
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .header-block{
+        h2{
+            font-size: 14px;
+        }
+    }
+}
